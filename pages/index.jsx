@@ -1,7 +1,8 @@
-import { useState } from "react";
+//import { useState } from "react";
+import TestComponent from "../components/testComponent";
 
 export default function Home() {
-  const [popup, setPopup] = useState(true);
+  //const [popup, setPopup] = useState(true);
   const imageUrl =
     "https://img.lovepik.com/free-png/20220117/lovepik-tea-garden-view-png-image_401433788_wh860.png";
 
@@ -29,6 +30,8 @@ export default function Home() {
       >
         Hello world
       </h2>
+      <TestComponent propDegiskeni="Bu değer Home component'inden geldi" />
+      {/*
       {popup === true ? (
         <div>
           <button
@@ -47,7 +50,7 @@ export default function Home() {
             title="description"
           ></iframe>
         </div>
-      ) : null}
+      ) : null} */}
       <input
         type="text"
         onChange={(event) => {
