@@ -92,11 +92,10 @@ export default function Home() {
 
 - JSX yapısında (DOM içerisinde) yorum satırı HTML'de olduğu gibi <!-- COMMENT --> şeklinde değil aşağıdaki gibi açılır. Javascript yazılan yani return() öncesindeki kısımda yorum satırları Javascript'teki gibidir.
 
-````
+```
 {
     /*
         YORUM SATIRI
     */
 }
-        ```
-````
+```
