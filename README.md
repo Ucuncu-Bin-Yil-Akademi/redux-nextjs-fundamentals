@@ -44,7 +44,9 @@ komutu terminalde çalıştırılır
 
 ## 4- JSX gösterimi
 
-- inline css yazmak için HTML'de olduğu gibi style="" yapısını kullanmak yerine style={{ }} yapısını kullanmamız gerekmektedir. Dikkat edilmesi gereken diğer husus ise CSS propertylerini yazarken tire işareti kullanmamaktadır. Bunun yerine camelCase gösterim kullanılmalıdır. Ayrıca CSS property'lerini ayırmak için ";" yerine "," kullanılmalıdır
+- inline css yazmak için HTML'de olduğu gibi style="" yapısını kullanmak yerine style={{ }} yapısını kullanmamız gerekmektedir.
+  -Dikkat edilmesi gereken diğer husus ise CSS propertylerini yazarken tire işareti kullanmamaktadır. Bunun yerine camelCase gösterim kullanılmalıdır.
+- Ayrıca CSS property'lerini ayırmak için ";" yerine "," kullanılmalıdır
 
 ```
 style={{
@@ -61,4 +63,29 @@ style={{
     backgroundColor: "#252525",
     color: "red"
 }}
+```
+
+- HTML etiketlerine class attribute'u tanımlanırken class="heading" yapısı yerine className="heading" yapısı kullanılmalıdır. Kısacası class attribute'u yerine JSX yapısında className attribute'u kullanılır.
+
+- Bir attribute'a değişken bir değer atamak istiyorsak attribute={degiskenAdi} şeklinde tanımlama yapabiliriz:
+
+```
+    <img src={imageUrl} alt="nextjs" />
+```
+
+- DOM kısmında bir değişken çağırmak için yine süslü parantez kullanılabilir: {degiskenAdi}
+
+- return içerisinde (DOM kısmında) Javascript yazılmaz (İstisnalar alt maddede belirtilmiştir). Javascript kodlarını return() yapısının üzerinde yazarız:
+
+```
+export default function Home() {
+
+    JAVASCRIPT KODLARI BURADA YAZILIR
+
+    return(
+        <>
+            HTML KODLARI BURADA YAZILIR
+        </>
+    )
+}
 ```
