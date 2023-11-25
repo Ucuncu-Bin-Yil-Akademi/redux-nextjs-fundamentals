@@ -99,3 +99,14 @@ export default function Home() {
     */
 }
 ```
+
+- Event'leri kontrol etmek için camelCase olmak kaydıyla attribute olarak elemana tanımlayabiliriz. Bu event'in attribute'una değer olarak bir anonim - anonymous fonksiyon girilir ve Javascript yazılan kısımda bir fonksiyon oluşturup bu fonksiyon çağrılabilir.
+
+```
+<h2 onClick={() => {
+    alert("Tıklandı")
+}}>Tıklanabilir eleman</h2>
+
+
+<h2 onClick={clickHandler}>Tıklanabilir eleman</h2>
+```

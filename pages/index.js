@@ -3,7 +3,9 @@ export default function Home() {
     "https://img.lovepik.com/free-png/20220117/lovepik-tea-garden-view-png-image_401433788_wh860.png";
 
   // YORUM SATIRI - TEK SATIR
-
+  const clickHandler = () => {
+    alert("Tıklandı");
+  };
   let firstName = "Canberk";
 
   /* 
@@ -14,6 +16,7 @@ export default function Home() {
   return (
     <>
       <h2
+        onClick={clickHandler}
         className="baslik"
         style={{
           backgroundColor: "#252525",
@@ -22,7 +25,20 @@ export default function Home() {
       >
         Hello world
       </h2>
-      <p>Merhaba</p>
+      <input
+        type="text"
+        onChange={(event) => {
+          console.log(event.target.value);
+          // input içerisindeki değer event.target.value ile alınır.
+        }}
+      />
+      <p
+        onClick={() => {
+          console.log("Merhaba");
+        }}
+      >
+        Merhaba
+      </p>
       <img
         src="https://img.lovepik.com/free-png/20220117/lovepik-tea-garden-view-png-image_401433788_wh860.png"
         alt="nextjs"
