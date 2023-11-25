@@ -23,5 +23,15 @@ return(
 ````
 
 ```
-şeklindeki bir gösterim JSX yapısına uygun olmadığı için hata verecektir.
+şeklindeki bir gösterim JSX yapısına uygun olmadığı için hata verecektir. Bunun yerine bütün elemanları kapsayan bir parent etiket olmalıdır:
+
+```
+
+```
+return(
+    <>
+    <h2>Selam</h2>
+    <span>selam</span>
+    </>
+)
 ```
