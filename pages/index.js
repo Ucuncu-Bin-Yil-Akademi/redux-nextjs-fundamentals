@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 export default function Home() {
+  const [popup, setPopup] = useState(true);
   const imageUrl =
     "https://img.lovepik.com/free-png/20220117/lovepik-tea-garden-view-png-image_401433788_wh860.png";
 
@@ -21,10 +24,30 @@ export default function Home() {
         style={{
           backgroundColor: "#252525",
           color: "red",
+          cursor: "pointer",
         }}
       >
         Hello world
       </h2>
+      {popup === true ? (
+        <div>
+          <button
+            onClick={() => {
+              setPopup(false);
+            }}
+          >
+            Kapat
+          </button>
+          <iframe
+            style={{
+              width: "100%",
+              height: "500px",
+            }}
+            src="https://programiz.pro"
+            title="description"
+          ></iframe>
+        </div>
+      ) : null}
       <input
         type="text"
         onChange={(event) => {
