@@ -1,7 +1,14 @@
 export default function Home() {
   return (
     <>
-      <h2>Hello world</h2>
+      <h2
+        style={{
+          backgroundColor: "#252525",
+          color: "red",
+        }}
+      >
+        Hello world
+      </h2>
       <p>Merhaba</p>
     </>
   );

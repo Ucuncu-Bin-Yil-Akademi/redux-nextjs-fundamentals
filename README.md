@@ -31,3 +31,34 @@ return(
     </>
 )
 ```
+
+## 3- Projenin ayağa kaldırılması
+
+Projemizi local sunucuda ayağı kaldırmak için
+
+```
+npm run dev
+```
+
+komutu terminalde çalıştırılır
+
+## 4- JSX gösterimi
+
+- inline css yazmak için HTML'de olduğu gibi style="" yapısını kullanmak yerine style={{ }} yapısını kullanmamız gerekmektedir. Dikkat edilmesi gereken diğer husus ise CSS propertylerini yazarken tire işareti kullanmamaktadır. Bunun yerine camelCase gösterim kullanılmalıdır. Ayrıca CSS property'lerini ayırmak için ";" yerine "," kullanılmalıdır
+
+```
+style={{
+    background-color: "#252525";
+    color: "red"
+}}
+
+```
+
+yerine aşağıdaki yapı kullanılmalıdır:
+
+```
+style={{
+    backgroundColor: "#252525",
+    color: "red"
+}}
+```
