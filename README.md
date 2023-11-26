@@ -182,3 +182,31 @@ export default ContactForm;
 -Ancak ContactForm component'inden Home.jsx (Child'tan Parent'a) component'ine veya ContactForm'dan ProductInfo (Child'tan Child'a) component'inde data göndermek kolay olmayacaktır. Bu gibi durumlarda data'nın aşağıdan yukarıya veya yatay olarak taşınması zorluk çıkartacaktır. Bu sorun 'Prop Drilling' olarak adlandırılır.
 
 - Bunun çözümü için Redux gibi araçlar kullanılabilir.
+
+## useState ve useEffect Hook'ları
+
+- React içinde oluşturduğumuz değişkenler reaktif değildir. Yani const counter = 0 şeklinde açtığımız bir değişkeni React içerisinde counter = counter + 1 şeklinde güncellememiz mümkün değildir. Bunu useState Hook'u ile yapmamız gerekecektir. State değerini setState şeklinde (ör: setCounter) güncelleyebiliriz:
+
+```
+import { useState } from "react";
+
+export default function Counter() {
+  const [counter, setCounter] = useState(0);
+
+    useEffect(() => {
+    alert("Sayfa yüklendi");
+    }, []);
+
+  useEffect(() => {
+    alert("Counter değişti");
+  }, [counter]);
+
+  return (
+    <>
+      <button onClick={() => { setCounter(counter - 1); }}>
+        Azalt
+      </button>
+    </>
+  );
+}
+```
