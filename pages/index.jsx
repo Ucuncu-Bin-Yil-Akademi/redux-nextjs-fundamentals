@@ -1,5 +1,4 @@
 //import { useState } from "react";
-import TestComponent from "../components/testComponent";
 
 export default function Home() {
   //const [popup, setPopup] = useState(true);
@@ -30,7 +29,6 @@ export default function Home() {
       >
         Hello world
       </h2>
-      <TestComponent propDegiskeni="Bu değer Home component'inden geldi" />
       {/*
       {popup === true ? (
         <div>

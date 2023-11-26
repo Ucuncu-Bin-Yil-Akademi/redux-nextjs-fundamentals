@@ -111,3 +111,24 @@ onClick={() => {
 
 <h2 onClick={clickHandler}>Tıklanabilir eleman</h2>
 ```
+
+- NextJS projesinde 'pages' klasörü içine açtığımız her dizin bir sayfa olarak tanımlanır. Örneğin pages > sayfa-adi şeklinde açtığımız bir klasör artık bir sayfa olacaktır. Bu sayfaya doğrudan http://localhost:3000/sayfa-adi şeklinde erişebiliriz. Bu klasörün içindeki index.jsx dosyası bizim sayfamızın ana component dosyasıdır.
+
+## 5- Component ve Props
+
+Component oluşturmadaki temel amacımız aşağıdaki gibi özetlenebilir:
+
+- Kod kalabalığını ve satır sayısını azaltmak
+- Reusable - Tekrar kullanılabilirlik ve bakım maliyetlerinin düşürülmesi (Örneğin Header alanı component şeklinde yazılmadığı takdirde her sayfada tek tek güncellenmek ve aynı kodu tekrar tekrar bu sayfada yazmak zorunda kalınabilir)
+- Performans katkısı
+
+### Component Oluşturma ve Çağırma
+
+- Yeni component oluşturmak için root dizininde 'components' adında bir klasör oluşturup, component'larımızı bu klasör içerisinde yaratabiliriz.Örnek: components > ContactForm.jsx
+- Bu component'imizi çağırmak için ise, çağırmak istediğimiz sayfaya/component'e gidip ilk önce import etmemiz gerekir:
+
+```
+import ContactForm from "../../components/ContactForm";
+```
+
+-Import ettiğimiz component'i kullanmak için çağırdığımız component içinde '<ContactForm />' şeklinde istediğimiz yerde kullanmamız yeterlidir.
