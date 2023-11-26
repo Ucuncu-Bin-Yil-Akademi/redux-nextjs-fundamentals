@@ -132,3 +132,45 @@ import ContactForm from "../../components/ContactForm";
 ```
 
 -Import ettiğimiz component'i kullanmak için çağırdığımız component içinde '<ContactForm />' şeklinde istediğimiz yerde kullanmamız yeterlidir.
+
+### Props
+
+- Bir component'e prop göndermek için attribute şeklinde tanımlama yapmamız yeterlidir:
+
+```
+<ContactForm propName='value of prop' />
+```
+
+- Component'te bir prop'u çağırmak için aşağıdaki yaklaşımı kullanabiliriz:
+
+```
+function ContactForm({ propName }) {
+  return (
+    <>
+      <div className="p-5 m-5 border flex flex-col">
+        {propName}
+      </div>
+    </>
+  );
+}
+
+export default ContactForm;
+```
+
+Bu component'teki propName değişkeninin değeri 'value of prop' şeklinde olacaktır.
+
+- Prop'ları karşılamak için alternatif bir yaklaşım (Fazla sayıda prop gönderiliyorsa oldukça kullanışlıdır):
+
+```
+function ContactForm(props) {
+  return (
+    <>
+      <div className="p-5 m-5 border flex flex-col">
+        {props.propName}
+      </div>
+    </>
+  );
+}
+
+export default ContactForm;
+```
