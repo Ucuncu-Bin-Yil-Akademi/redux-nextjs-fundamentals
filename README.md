@@ -174,3 +174,11 @@ function ContactForm(props) {
 
 export default ContactForm;
 ```
+
+## PROP DRILLING
+
+-Component'ler arasında props ile değişkenleri nasıl aktaracağımızı gördük. Örneğin Home.jsx component'inden ContactForm component'ine veya ProductInfo component'ine kolaylıkla props aktarabiliyoruz (Yukarıdan aşağıya doğru - Parent'tan Child'a doğru).
+
+-Ancak ContactForm component'inden Home.jsx (Child'tan Parent'a) component'ine veya ContactForm'dan ProductInfo (Child'tan Child'a) component'inde data göndermek kolay olmayacaktır. Bu gibi durumlarda data'nın aşağıdan yukarıya veya yatay olarak taşınması zorluk çıkartacaktır. Bu sorun 'Prop Drilling' olarak adlandırılır.
+
+- Bunun çözümü için Redux gibi araçlar kullanılabilir.

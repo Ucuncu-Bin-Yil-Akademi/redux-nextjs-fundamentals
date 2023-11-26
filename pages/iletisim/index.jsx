@@ -1,4 +1,5 @@
 import ContactForm from "../../components/ContactForm";
+import ProductInfo from "../../components/ProductInfo";
 
 export default function Iletisim() {
   const aciklama = "En kısa sürede size dönüş yapılacaktır.";
@@ -15,6 +16,7 @@ export default function Iletisim() {
       <p>Adres: Lorem ipsum dolor sit amet.</p>
 
       <ContactForm formTitle="Bize Ulaşın" formDescription={aciklama} />
+      <ProductInfo />
     </>
   );
 }

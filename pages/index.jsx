@@ -1,4 +1,6 @@
 //import { useState } from "react";
+import ContactForm from "@/components/ContactForm";
+import ProductInfo from "../components/ProductInfo";
 
 export default function Home() {
   //const [popup, setPopup] = useState(true);
@@ -10,6 +12,21 @@ export default function Home() {
     alert("Tıklandı");
   };
   let firstName = "Canberk";
+
+  const allProducts = [
+    {
+      name: "Siyah Kulaklık",
+      price: 500,
+    },
+    {
+      name: "Beyaz Kulaklık",
+      price: 600,
+    },
+    {
+      name: "Kırmızı Kulaklık",
+      price: 700,
+    },
+  ];
 
   /* 
   YORUM SATIRI
@@ -72,6 +89,8 @@ export default function Home() {
         YORUM SATIRI
         */}
       <div>{firstName}</div>
+      <ContactForm />
+      <ProductInfo products={allProducts} />
     </>
   );
 }
