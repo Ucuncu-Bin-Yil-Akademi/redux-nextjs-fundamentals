@@ -274,7 +274,7 @@ export default function App({ Component, pageProps }) {
 }
 ```
 
-## Güncelleme - Dispatch işlemi
+** Güncelleme - Dispatch işlemi
 
 ```
 
@@ -308,7 +308,7 @@ export default function CounterButtons(){
 }
 ```
 
-## Store'dan bir state almak için:
+** Store'dan bir state almak için:
 
 ```
 import CounterButtons from "@/components/CounterButtons";
