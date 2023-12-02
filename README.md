@@ -333,3 +333,46 @@ Normal bir redux yapısı entegre edildiğinde, sayfa yenilendiğinde veya deği
 ```
 npm i redux-persist
 ```
+
+
+- Paket kurulduktan sonra store > store.js içerisinde dokümantasyonda anlatılan yapılandırmalar gerçekleştirilir ve reducer'ımız persist - kalıcı hale bürünmüş olur:
+
+```
+import {createStore} from 'redux';
+import rootReducer from './reducers';
+import storage from 'redux-persist/lib/storage'
+import { persistStore, persistReducer } from 'redux-persist'
+
+const persistConfig = {
+    key: 'root',
+    storage,
+}
+
+const persistedReducer = persistReducer(persistConfig, rootReducer)
+
+const CounterStore = createStore(persistedReducer);
+const persistor = persistStore(CounterStore);
+
+export {CounterStore, persistor}
+```
+
+- Son olarak _app.js içerisinde aşağıdaki wrap işlemi yapılır:
+
+```
+import { Provider } from "react-redux";
+import { CounterStore, persistor } from "../store/store";
+import { PersistGate } from "redux-persist/integration/react";
+import "@/styles/globals.css";
+
+export default function App({ Component, pageProps }) {
+  return (
+    <Provider store={CounterStore}>
+      <PersistGate persistor={persistor}>
+        <Component {...pageProps} />
+      </PersistGate>
+    </Provider>
+  );
+}
+```
+
+- Böylece artık reducer'larımız ve store'larımız kalıcı hale bürünecektir.
