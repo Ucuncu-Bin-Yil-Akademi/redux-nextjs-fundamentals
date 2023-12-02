@@ -308,7 +308,7 @@ export default function CounterButtons(){
 }
 ```
 
-** Store'dan bir state almak için:
+** Store'dan bir state almak için useSelector metodu kullanılarak alınmak istenen state belirtilir:
 
 ```
 import CounterButtons from "@/components/CounterButtons";
