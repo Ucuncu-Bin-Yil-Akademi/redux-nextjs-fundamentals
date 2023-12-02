@@ -325,3 +325,11 @@ export default function Counter() {
 }
 ```
 
+
+* Redux-Persist ile store'ların localStorage'da saklanması
+
+Normal bir redux yapısı entegre edildiğinde, sayfa yenilendiğinde veya değiştiğinde store değerlerimiz initialState durumuna geri döner yani ilk haline sıfırlanır. Bu paket sayesinde state'lerimizin sıfırlanmasının önüne geçmiş oluyoruz:
+
+```
+npm i redux-persist
+```
