@@ -376,3 +376,20 @@ export default function App({ Component, pageProps }) {
 ```
 
 - Böylece artık reducer'larımız ve store'larımız kalıcı hale bürünecektir.
+
+
+** API / Servis İstekleri
+
+Bir API'ye istek göndermek için axios paketini tercih etmekteyiz:
+```
+npm install axios
+```
+
+komutu ile projeye axios paketi dahil edilir.
+
+- Kullanmak istediğimiz component içerisinde axios paketi çağrılır:
+```
+import axios from "axios"
+```
+
+- 
