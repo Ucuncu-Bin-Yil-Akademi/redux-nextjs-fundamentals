@@ -210,3 +210,7 @@ export default function Counter() {
   );
 }
 ```
+
+## Redux
+
+- İlk önce ihtiyaç duyulan paketler ``` npm install redux``` ve ``` npm install react-redux ``` komutları ile yüklenir
